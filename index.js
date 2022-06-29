@@ -1,9 +1,9 @@
 function hasTargetSum(array, target) {
   for (let i = 0; i < array.length; i++){
-        // n steps (depending on the length of the input array)
+        
     const complement = target - array[i];
     for (let j = i + 1; j < array.length; j++) {
-       // n * n steps (nested loop!)
+      
       if (array[j] === complement) return true;
     }
   }
@@ -32,7 +32,7 @@ if we reach the end of the array, return false
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+  
   console.log("Expecting: true");
   console.log("=>", hasTargetSum([3, 8, 12, 4, 11, 7], 10));
 
